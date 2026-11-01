@@ -1,0 +1,53 @@
+seed: 1
+
+data:
+  root: data/mock                    # swap for Component A's real dataset root later
+  vocab_file: configs/mock_vocab.json
+  train_split: train
+  val_split: val
+
+features:                            # every change here must be logged in FEATURE_SPEC.md
+  use_pose: true
+  use_hands: true
+  face: reduced                      # none | reduced | full   (ablation knob, risk R4)
+  add_velocity: false
+
+model:
+  type: bilstm_ctc
+  proj_dim: 256
+  hidden_size: 192
+  num_layers: 2
+  dropout: 0.3
+  input_dropout: 0.1
+
+train:
+  epochs: 60
+  batch_size: 16
+  lr: 1.0e-3
+  weight_decay: 1.0e-2
+  grad_clip: 5.0
+  num_workers: 0
+  device: auto                       # auto | cpu | cuda
+  runs_dir: runs
+  blank_check_every: 5               # CTC blank-collapse monitor (risk R1)
+
+augment:
+  enabled: true
+  time_stretch: [0.85, 1.15]
+  noise_std: 0.01
+  landmark_dropout_p: 0.02
+
+fallback:                            # Appendix B sliding-window classifier
+  window: 30
+  stride: 5
+  threshold: 0.75
+  epochs: 20
+  batch_size: 32
+  lr: 1.0e-3
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.2
+
+decode:
+  method: greedy                     # greedy | beam
+  beam_width: 10

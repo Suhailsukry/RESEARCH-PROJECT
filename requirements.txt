@@ -1,0 +1,12 @@
+# Python 3.10 or 3.11 only (MediaPipe wheel availability is version-sensitive).
+# After Week-1 verification, replace these with the EXACT versions on all 3 machines
+# and record them in FEATURE_SPEC.md.
+numpy>=1.26
+pyyaml>=6.0
+scipy>=1.11
+torch>=2.2
+pytest>=8
+
+# Real video extraction only (skip while using mock data):
+# mediapipe==0.10.14
+# opencv-python>=4.9

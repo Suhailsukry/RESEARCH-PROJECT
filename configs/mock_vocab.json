@@ -1,0 +1,33 @@
+{
+  "_note": "MOCK healthcare vocabulary. Replace with Component A's gloss inventory v1. Sinhala strings are PLACEHOLDERS: verify with SLAD before any demo.",
+  "glosses": [
+    {"gloss": "I",        "sinhala": "මම",         "english": "I"},
+    {"gloss": "YOU",      "sinhala": "ඔබ",         "english": "you"},
+    {"gloss": "NEED",     "sinhala": "අවශ්‍යයි",    "english": "need"},
+    {"gloss": "WHERE",    "sinhala": "කොහෙද",      "english": "where"},
+    {"gloss": "PAIN",     "sinhala": "වේදනාව",     "english": "pain"},
+    {"gloss": "FEVER",    "sinhala": "උණ",         "english": "fever"},
+    {"gloss": "CHEST",    "sinhala": "පපුව",       "english": "chest"},
+    {"gloss": "HEAD",     "sinhala": "හිස",        "english": "head"},
+    {"gloss": "STOMACH",  "sinhala": "බඩ",         "english": "stomach"},
+    {"gloss": "DOCTOR",   "sinhala": "වෛද්‍යවරයා",  "english": "doctor"},
+    {"gloss": "HOSPITAL", "sinhala": "රෝහල",       "english": "hospital"},
+    {"gloss": "MEDICINE", "sinhala": "බෙහෙත්",     "english": "medicine"},
+    {"gloss": "WATER",    "sinhala": "වතුර",       "english": "water"},
+    {"gloss": "HELP",     "sinhala": "උදව්",       "english": "help"}
+  ],
+  "sentences": [
+    ["I", "CHEST", "PAIN"],
+    ["I", "HEAD", "PAIN"],
+    ["I", "STOMACH", "PAIN"],
+    ["I", "FEVER"],
+    ["I", "NEED", "DOCTOR"],
+    ["I", "NEED", "MEDICINE"],
+    ["I", "NEED", "WATER"],
+    ["I", "NEED", "HELP"],
+    ["YOU", "NEED", "MEDICINE"],
+    ["WHERE", "HOSPITAL"],
+    ["WHERE", "DOCTOR"]
+  ],
+  "sentence_overrides": {}
+}

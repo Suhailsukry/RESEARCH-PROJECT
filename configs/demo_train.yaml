@@ -1,0 +1,48 @@
+augment:
+  enabled: true
+  landmark_dropout_p: 0.02
+  noise_std: 0.01
+  time_stretch:
+  - 0.85
+  - 1.15
+data:
+  root: data/mock
+  train_split: train
+  val_split: val
+  vocab_file: configs/mock_vocab.json
+decode:
+  beam_width: 10
+  method: greedy
+fallback:
+  batch_size: 32
+  dropout: 0.2
+  epochs: 20
+  hidden_size: 128
+  lr: 0.001
+  num_layers: 1
+  stride: 5
+  threshold: 0.75
+  window: 30
+features:
+  add_velocity: false
+  face: reduced
+  use_hands: true
+  use_pose: true
+model:
+  dropout: 0.3
+  hidden_size: 192
+  input_dropout: 0.1
+  num_layers: 2
+  proj_dim: 256
+  type: bilstm_ctc
+seed: 1
+train:
+  batch_size: 16
+  blank_check_every: 5
+  device: auto
+  epochs: 60
+  grad_clip: 5.0
+  lr: 0.0003
+  num_workers: 0
+  runs_dir: runs
+  weight_decay: 0.01
